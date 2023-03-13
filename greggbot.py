@@ -53,7 +53,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
         filename = data['title'] if stream else ytdl.prepare_filename(data)
         return filename
     
-@bot.command(name='play_song', help='To play song')
+@bot.command(name='play', help='To play song')
 async def play(ctx,url):
     server = ctx.message.guild
     voice_channel = server.voice_client
